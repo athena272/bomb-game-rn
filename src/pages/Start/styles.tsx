@@ -22,3 +22,10 @@ export const StyledTitle = styled.Text`
     text-align: center;
     color: white;
 `;
+
+export const StyledSubTitle = styled.Text`
+    font-size: ${RFValue(16)}px;
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+`;
