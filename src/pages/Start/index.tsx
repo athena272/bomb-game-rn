@@ -1,8 +1,12 @@
+import { Alert } from "react-native";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
+import { RootStackParamList } from "../../types";
 import { StyledContainer, StyledLogo, StyledTitle, StyledSubTitle, Rules } from "./styles";
 import Button from "../../components/Button";
-import { Alert } from "react-native";
 
 export default function Start() {
+    const navigation = useNavigation<NavigationProp<RootStackParamList>>()
+
     function handleNavToPlayAlone() {
         Alert.alert("Botão clicado 1");
     }
@@ -12,7 +16,7 @@ export default function Start() {
     }
 
     function handleNavToRules() {
-        Alert.alert("Rules clicado!")
+        navigation.navigate('Rules')
     }
 
     return (

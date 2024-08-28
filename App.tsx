@@ -1,8 +1,7 @@
-import Start from "./src/pages/Start";
-import Rules from "./src/pages/Rules";
+import Routes from "./src/routes";
 
 export default function App() {
   return (
-    <Rules />
+    <Routes />
   );
 }

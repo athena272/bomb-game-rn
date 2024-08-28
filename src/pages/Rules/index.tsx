@@ -1,9 +1,12 @@
-import { Alert } from "react-native";
+import { NavigationProp, useNavigation } from "@react-navigation/native";
+import { RootStackParamList } from "../../types";
 import { ScrollTextRules, StyledContainer, StyledIcon, StyledNumberParagraph, StyledParagraph, StyledTitle } from "./styles";
 
 export default function Rules() {
+    const navigation = useNavigation<NavigationProp<RootStackParamList>>()
+
     function handleNavToStart() {
-        Alert.alert("Ícone clicado");
+        navigation.navigate('Start')
     }
 
     return (

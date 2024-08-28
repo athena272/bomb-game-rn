@@ -4,4 +4,8 @@ pnpm add react-native-responsive-fontsize
 
 pnpm add react-native-iphone-x-helper
 
+pnpm install @react-navigation/native
+
+pnpm install @react-navigation/native-stack
+
 npx expo install react-dom
