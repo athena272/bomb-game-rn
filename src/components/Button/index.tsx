@@ -1,4 +1,4 @@
-import { StyledButton, ButtonContent } from "./style";
+import { StyledButton, ButtonContent } from "./styles";
 
 type ButtonProps = {
     buttonText: string
