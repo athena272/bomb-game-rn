@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "bomb-game-rn",
-    "slug": "bomb-game-rn",
+    "name": "Bomb Game",
+    "slug": "Bomb Game",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./src/assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "image": "./src/assets/splash.png",
+      "backgroundColor": "#000000",
+      "resizeMode": "contain"
     },
     "ios": {
       "supportsTablet": true
