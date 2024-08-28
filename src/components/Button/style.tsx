@@ -12,3 +12,9 @@ export const StyledButton = styled.TouchableOpacity`
     justify-content: center;
     align-items: center;
 `;
+
+export const ButtonContent = styled.Text`
+    font-size: ${RFValue(20)}px;
+    color: black;
+    font-family: sans-serif;
+`;
