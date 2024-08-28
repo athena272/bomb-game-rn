@@ -1,4 +1,4 @@
-import { StyledContainer, StyledLogo, StyledTitle } from "./styles";
+import { StyledContainer, StyledLogo, StyledTitle, StyledSubTitle } from "./styles";
 
 export default function Start() {
     return (
@@ -8,6 +8,7 @@ export default function Start() {
                 style={{ resizeMode: "contain" }}
             />
             <StyledTitle>Bem-vindo ao {'\n'} Bomb Game</StyledTitle>
+            <StyledSubTitle>Escolha um modo de jogo.</StyledSubTitle>
         </StyledContainer>
     );
 }
