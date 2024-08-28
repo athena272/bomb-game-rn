@@ -1,0 +1,7 @@
+pnpm create expo-app base-rn --template
+
+pnpm add react-native-responsive-fontsize
+
+pnpm add react-native-iphone-x-helper
+
+npx expo install react-dom
