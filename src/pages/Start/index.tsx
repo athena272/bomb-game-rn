@@ -8,7 +8,7 @@ export default function Start() {
     const navigation = useNavigation<NavigationProp<RootStackParamList>>()
 
     function handleNavToPlayAlone() {
-        Alert.alert("Botão clicado 1");
+       navigation.navigate('PlayAlone')
     }
 
     function handleNavToPlayTogether() {
