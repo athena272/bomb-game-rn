@@ -1,4 +1,3 @@
-import { Alert } from "react-native";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import { RootStackParamList } from "../../types";
 import { StyledContainer, StyledLogo, StyledTitle, StyledSubTitle, Rules } from "./styles";
@@ -12,7 +11,7 @@ export default function Start() {
     }
 
     function handleNavToPlayTogether() {
-        Alert.alert("Botão clicado 2");
+        navigation.navigate('PlayTogether')
     }
 
     function handleNavToRules() {
