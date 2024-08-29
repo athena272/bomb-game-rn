@@ -8,4 +8,8 @@ pnpm install @react-navigation/native
 
 pnpm install @react-navigation/native-stack
 
+pnpm add @expo-google-fonts/roboto
+
+pnpm add expo-splash-screen
+
 npx expo install react-dom
