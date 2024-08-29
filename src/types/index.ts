@@ -3,4 +3,5 @@ export type RootStackParamList = {
     Start: undefined
     Rules: undefined
     PlayAlone: undefined
+    PlayTogether: undefined
 };
