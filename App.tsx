@@ -1,5 +1,5 @@
+import React, { useCallback, useEffect } from "react";
 import { useFonts, Roboto_400Regular, Roboto_500Medium, Roboto_700Bold } from "@expo-google-fonts/roboto";
-import { useCallback, useEffect } from "react";
 import { Text, View } from "react-native";
 import * as SplashScreen from "expo-splash-screen";
 import Routes from "./src/routes";
