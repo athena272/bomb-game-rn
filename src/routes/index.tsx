@@ -13,7 +13,7 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 export default function Routes() {
     return (
         <NavigationContainer>
-            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Exploded">
+            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Start">
                 <Stack.Screen name="Start" component={Start} />
                 <Stack.Screen name="Rules" component={Rules} />
                 <Stack.Screen name="PlayAlone" component={PlayAlone} />
