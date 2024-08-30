@@ -1,5 +1,6 @@
 import { BombMessage, StyledContainer, StyledTitle } from "./styles";
 import InputTimer from "../../components/InputTimer";
+import TipInput from "./TipInput";
 
 export default function PlayTogether() {
     return  (
@@ -7,6 +8,7 @@ export default function PlayTogether() {
             <StyledTitle>Bomb Game Dupla</StyledTitle>
             <InputTimer />
             <BombMessage>Mensagem de erro temporário!</BombMessage>
+            <TipInput />
         </StyledContainer>
     )
 }
