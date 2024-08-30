@@ -1,5 +1,4 @@
-import { StyledContainer, TipTitle } from "../styles";
-import { InputContainer, StyledInput } from "./styles";
+import { StyledContainer, TipTitle, InputContainer, StyledInput } from "./styles";
 
 export default function TipInput() {
     return (
