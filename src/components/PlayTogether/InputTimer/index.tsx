@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { ImageBackground, Keyboard, TextInput } from 'react-native'
-import bombImg from '../../assets/bomba.png'
+import bombImg from '../../../assets/bomba.png'
 import { InputContainer, StyledInput, TextTimer, Timer } from './styles'
 
 export default function InputTimer() {
