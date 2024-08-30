@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Alert, ImageBackground } from "react-native";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import bombImg from '../../assets/bomba.png'
@@ -5,8 +6,23 @@ import { StyledContainer, StyledTitle, TextTimer, Timer, TipContainer, TipText, 
 import { RootStackParamList } from "../../types";
 import PasswordInput from "../../components/PasswordInput";
 import Button from "../../components/Button";
+import BombService from "../../services/BombApp";
 
 export default function PlayAlone() {
+    const [started, setStarted] = useState(false);
+    const [pin, setPin] = useState(["", "", ""]);
+    const [hours, setHours] = useState("00");
+    const [minutes, setMinutes] = useState("03");
+    const [seconds, setSeconds] = useState("00");
+
+    function handleStartBomb() {
+        const diffTime = BombService.getDiffTime({ hours, seconds, minutes })
+    }
+
+    const [question, setQuestion] = useState("");
+    const [answer, setAnswer] = useState("");
+    const [intervalId, setIntervalId] = useState();
+
     const navigation = useNavigation<NavigationProp<RootStackParamList>>()
 
     function handleNavToStart() {
@@ -16,7 +32,7 @@ export default function PlayAlone() {
     function handleStartGame() {
         Alert.alert('Jogo começou!')
     }
-  
+
     return (
         <StyledContainer>
             <StyledTitle>Bomb Game Solo</StyledTitle>
@@ -43,8 +59,8 @@ export default function PlayAlone() {
             </TipContainer>
 
             <PasswordInput />
-            <Button buttonText="Iniciar" handlePress={handleStartGame}/>
-            <Button buttonText="Página Inicial" handlePress={handleNavToStart}/>
+            <Button buttonText="Iniciar" handlePress={handleStartGame} />
+            <Button buttonText="Página Inicial" handlePress={handleNavToStart} />
         </StyledContainer>
     )
 }
