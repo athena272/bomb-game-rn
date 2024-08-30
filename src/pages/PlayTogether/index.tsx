@@ -1,5 +1,5 @@
 import { BombMessage, StyledContainer, StyledTitle } from "./styles";
-import InputTimer from "../../components/InputTimer";
+import InputTimer from "../../components/PlayTogether/InputTimer";
 import TipInput from "./TipInput";
 
 export default function PlayTogether() {
