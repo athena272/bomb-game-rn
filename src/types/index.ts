@@ -5,4 +5,5 @@ export type RootStackParamList = {
     PlayAlone: undefined
     PlayTogether: undefined
     Disarmed: undefined
+    Exploded: undefined
 };
