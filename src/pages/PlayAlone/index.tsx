@@ -10,6 +10,7 @@ import BombService from "../../services/BombApp";
 import api from "../../services/api/api";
 
 export default function PlayAlone() {
+    //States da aplicação
     const [started, setStarted] = useState(false);
     const [pin, setPin] = useState(["", "", ""]);
     const [hours, setHours] = useState("00");
