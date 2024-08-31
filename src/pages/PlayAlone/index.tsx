@@ -13,8 +13,8 @@ export default function PlayAlone() {
     const [started, setStarted] = useState(false);
     const [pin, setPin] = useState(["", "", ""]);
     const [hours, setHours] = useState("00");
-    const [minutes, setMinutes] = useState("00");
-    const [seconds, setSeconds] = useState("05");
+    const [minutes, setMinutes] = useState("01");
+    const [seconds, setSeconds] = useState("00");
     const [question, setQuestion] = useState("");
     const [answer, setAnswer] = useState("");
     const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
