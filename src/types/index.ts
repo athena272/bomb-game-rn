@@ -7,3 +7,13 @@ export type RootStackParamList = {
     Disarmed: undefined
     Exploded: undefined
 };
+
+export type Question = {
+    id: number;
+    pergunta: string;
+    resp: string;
+};
+
+export type ApiResponse = {
+    questions: Question[];
+};
