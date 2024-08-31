@@ -110,7 +110,7 @@ export default function PlayAlone() {
                     <TipText>{question}</TipText>
                 </TipContainer>
             )}
-            <TipText>{answer}</TipText>
+            {/* <TipText>{answer}</TipText> */}
 
             <PasswordInput pin={pin} setPin={setPin} />
             {!started ? (
