@@ -1,5 +1,6 @@
-import moment from "moment"
 import { Dispatch, SetStateAction } from "react"
+import { Vibration } from "react-native"
+import moment from "moment"
 import { NavigationProp } from "@react-navigation/native"
 
 type BombServiceProps = {
@@ -15,8 +16,25 @@ type StartCountdownProps = {
     setStarted: Dispatch<SetStateAction<boolean>>;
     diffTime: number;
     setIntervalId: Dispatch<SetStateAction<NodeJS.Timeout | null>>;
-    intervalId: NodeJS.Timeout | null;
-    navigation: NavigationProp<any>; // ou ajuste de acordo com sua navegação
+    intervalId: NodeJS.Timeout | null
+    navigation: NavigationProp<any> // ou ajuste de acordo com sua navegação
+}
+
+type BombStartGameProps = {
+    setStarted: Dispatch<SetStateAction<boolean>>
+    hours: string
+    minutes: string
+    seconds: string
+}
+
+
+type BombDisarmBombrops = {
+    setStarted: Dispatch<SetStateAction<boolean>>
+    answer: string
+    navigation: NavigationProp<any>
+    pin: string[]
+    setPin: Dispatch<SetStateAction<string[]>>
+    intervalId: NodeJS.Timeout | null
 }
 
 const BombService = {
@@ -79,7 +97,30 @@ const BombService = {
         setIntervalId(id);
 
         return null;
-    }
+    },
+    bombStartGame: ({ setStarted, hours, minutes, seconds }: BombStartGameProps) => {
+        if (hours.length > 0 || minutes.length > 0 || seconds.length > 0) {
+            setStarted(true);
+        }
+    },
+
+    disarmBomb: ({ setStarted, answer, navigation, pin, setPin, intervalId }: BombDisarmBombrops) => {
+        if (pin.join("") === answer) {
+            if (intervalId) {
+                clearInterval(intervalId);
+            }
+            setStarted(false);
+            navigation.navigate("Disarmed");
+
+            return;
+        }
+
+        setPin(["", "", ""]);
+
+        Vibration.vibrate(1000);
+
+        return;
+    },
 };
 
 export default BombService
